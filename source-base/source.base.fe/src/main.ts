@@ -1,0 +1,22 @@
+import { createApp } from 'vue';
+import ElementPlus from 'element-plus';
+import 'element-plus/dist/index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@/assets/core.css';
+import '@/assets/app-invoice.css';
+import '@/assets/style/app.scss';
+import '@/assets/theme-default.css';
+import '@/assets/page-auth.css';
+import '@/assets/datables.boostrap5.css';
+import '@/assets/buttons.bootstrap5.css';
+import '@/assets/vendor/fonts/boxicons.css';
+import '@vuepic/vue-datepicker/dist/main.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import 'boxicons/css/boxicons.css';
+import App from '@/App.vue';
+import { createPinia } from 'pinia';
+import router from '@/router/index.ts';
+
+const app = createApp(App);
+app.use(ElementPlus).use(createPinia()).use(router);
+app.mount('#app');

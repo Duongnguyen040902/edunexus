@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Thông Báo Đơn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .header {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .footer {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+            .content p {
+                margin: 10px 0;
+            }
+
+            .content .highlight {
+                font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>Thông Báo Đơn Của Học Sinh</h2>
+        </div>
+
+        <div class="content">
+            <p>Xin chào <span class="highlight">{{teacherFirstName}} {{teacherLastName}}</span>,</p>
+            <p>Học sinh <span class="highlight">{{pupilFirstName}} {{pupilLastName}}</span> đã gửi một đơn vào lớp học.</p>
+
+            <p><strong>Tiêu đề:</strong> {{classApplicationTitle}}</p>
+            <p><strong>Nội dung:</strong> {{classApplicationDescription}}</p>
+
+            <p>Vui lòng truy cập hệ thống để xử lý đơn.</p>
+        </div>
+
+        <div class="footer">
+            <p>Trân trọng,</p>
+            <p>EduNexus</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Phản Hồi Đơn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .header {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .footer {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+            .content p {
+                margin: 10px 0;
+            }
+
+            .content .highlight {
+                font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>Phản Hồi Đơn Của Học Sinh</h2>
+        </div>
+
+        <div class="content">
+            <p>Xin chào <span class="highlight">{{studentFirstName}} {{studentLastName}}</span>,</p>
+            <p>Đơn của bạn với tiêu đề <span class="highlight">{{applicationTitle}}</span> đã được giáo viên phản hồi.</p>
+
+            <p><strong>Nội dung phản hồi:</strong> {{responseContent}}</p>
+            <p><strong>Trạng thái phản hồi:</strong> {{responseStatus}}</p> <!-- Hiển thị trạng thái phản hồi -->
+
+            <p>Vui lòng truy cập hệ thống để biết thêm chi tiết.</p>
+        </div>
+
+        <div class="footer">
+            <p>Trân trọng,</p>
+            <p>EduNexus</p>
+        </div>
+    </div>
+
+</body>
+</html>

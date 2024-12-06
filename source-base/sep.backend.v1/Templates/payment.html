@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f6fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .notification-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border: 1px solid #e3e6eb;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .notification-header {
+            background-color: #e6f7e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #c3e6cb;
+            text-align: center;
+        }
+
+            .notification-header h1 {
+                color: #28a745;
+            }
+
+        .details-table {
+            border: 1px solid #e3e6eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+            .details-table th, .details-table td {
+                vertical-align: middle;
+                border: 1px solid #e3e6eb;
+            }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #e3e6eb;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        @media (max-width: 576px) {
+            .col-md-6 {
+                width: 100% !important;
+            }
+
+            .text-end {
+                text-align: left !important;
+            }
+
+            .table-responsive {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container notification-container">
+        <!-- Header -->
+        <div class="notification-header">
+            <h1>Thanh Toán Thành Công</h1>
+            <p>Thông Báo Thanh Toán Từ VNPay</p>
+        </div>
+
+        <!-- Payment Details -->
+        <div class="mt-4">
+            <p>Kính gửi quý khách hàng,</p>
+            <p>Quá trình thanh toán của bạn đã thành công. Dưới đây là chi tiết giao dịch:</p>
+            <table class="table details-table">
+                <tbody>
+                    <tr>
+                        <td>Mã Hóa Đơn:</td>
+                        <td class="text-end">{{invoice_id}}</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày Thanh Toán:</td>
+                        <td class="text-end">{{payment_date}}</td>
+                    </tr>
+                    <tr>
+                        <td>Phương Thức Thanh Toán:</td>
+                        <td class="text-end">{{payment_method}}</td>
+                    </tr>
+                    <tr>
+                        <td>Giá:</td>
+                        <td class="text-end">{{price}} VND</td>
+                    </tr>
+                    <tr>
+                        <td>Gói Dịch Vụ:</td>
+                        <td class="text-end">{{subscription_plan}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Cảm ơn bạn đã tin tưởng sử dụng dịch vụ của chúng tôi.</p>
+            <p>Trân trọng,<br>Đội ngũ hỗ trợ khách hàng</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
